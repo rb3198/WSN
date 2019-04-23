@@ -1,0 +1,177 @@
+/*Black & Yellow Material Theme*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	width: 100%;
+	background-color: rgb(20,20,20);
+	height: 12vh;
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 4px rgba(0,0,0,.5);
+
+}
+
+header a {
+	text-decoration: none;
+	font-family: Roboto;
+	color: rgb(226, 191, 15);
+	text-transform: uppercase;
+	margin-left: 10px;
+}
+
+header nav {
+	height: 100%;
+}
+header nav ul {
+	height: 12vh;
+	text-decoration: none;
+	display: flex;
+	flex-flow: row;	
+	align-items: center;
+	justify-content: space-around;
+	list-style: none;
+	font-family:  Roboto, sans-serif ;
+	color: white;
+	transition: all 0.5s;
+}
+
+header nav ul li {
+	display: flex;
+	flex-flow: row;
+	box-sizing: border-box;
+	text-align: center;
+	align-items: center;
+	height: 100%;
+	text-transform: uppercase;
+	padding-right: 20px;
+	padding-left: 20px;
+	transition: all 0.25s;
+	cursor: pointer;
+}
+
+header nav ul li:hover {
+	color: rgb(226, 191, 15);
+	border-bottom: 3px solid rgb(226, 191, 15);
+}
+/* Class for active choice */
+.active_ch_header {
+	color: rgb(226, 191, 15);
+	border-bottom: 3px solid rgb(226, 191, 15);
+}
+
+#main {
+	background-color: rgba(30,30,30);
+	height: 88vh;
+	display: flex;
+	flex-flow: row wrap;
+	flex: 1;
+	overflow: auto;
+	justify-content: flex-start;
+	/*align-items: center;*/
+}
+
+#main .chart {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: auto;
+	width: 50%;
+	position: relative;
+	margin-top: 15vh;
+}
+
+#main .chart .chart_head {
+	height: 11vh;
+	margin-top: 7vh;
+	margin-bottom: 3vh;
+	color: rgb(226, 191, 15);
+	font-family: 'Roboto';
+	text-transform: uppercase;
+
+}
+
+/*#main .chart .chart_data {
+	height: 67vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}*/
+
+#chart1, #chart2 {
+    width: 400px;
+    margin: 0 auto;
+    height: 200px;
+    overflow: hidden;
+    position: absolute;
+    top: 18vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.gauge-a {
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(255,255,255,.2);
+  width: 400px;
+  height: 200px;
+  top: 0%;
+  border-radius: 250px 250px 0px 0px;
+}
+
+.gauge-b {
+  z-index: 3;
+  position: absolute;
+  background-color: #222;
+  width: 250px;
+  height: 125px;
+  top: 75px;
+  margin-left: 75px;
+  margin-right: auto;
+  border-radius: 250px 250px 0px 0px;
+}
+
+.gauge-c {
+  z-index: 2;
+  position: absolute;
+  background-color: rgb(226, 191, 15);
+  width: 400px;
+  height: 200px;
+  top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0px 0px 200px 200px;
+  transform-origin: center top;
+  transition: all 1.3s ease-in-out;
+}
+
+.gauge-data {
+    z-index: 4;
+    color: rgba(255,255,255,1);
+    font-family: Roboto;
+    font-size: 1.5em;
+    /* line-height: 25px; */
+    /* position: absolute; */
+    /* width: 400px; */
+    /* height: 200px; */
+    /* top: 90px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    transition: all 1s ease-out;
+}
+#temp_tung, #temp_cfl {
+	height: 0;
+	width: 0;
+
+}
+
+#main iframe {
+	margin-bottom: 2vh;
+}
